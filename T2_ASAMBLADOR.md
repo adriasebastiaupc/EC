@@ -99,7 +99,7 @@ int v[100];
 
 c: .byte 0
 .align 2
-v: .space 100*4
+v: .space 100*4 # .space no puede alinear
 ```
 
 ---
