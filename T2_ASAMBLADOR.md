@@ -1,3 +1,5 @@
+![Registres en MIPS](img/registros_standard_mips.png)
+
 # **Resumen - Instruccions i tipus de dades bàsics (EC)**
 
 ## **2.2 La Memòria**
