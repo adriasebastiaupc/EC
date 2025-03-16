@@ -107,10 +107,10 @@ v: .space 100*4
 - **Principi de disseny**: "Simplicity favors regularity".
 - **Modes d’adreçament**:
   - **Registre**:
-    - addu rd, rs, rt
-    - subu rd, rs, rt
+    - addu rd, rs, rt → rd = rs + rt
+    - subu rd, rs, rt → rd = rs - rt
   - **Immediat**:
-    - addiu rt, rs, imm16 --> rt = rs + SignExt(imm16)
+    - addiu rt, rs, imm16 → rt = rs + SignExt(imm16) # Inmediat de 16bits en Ca2
   - **Memòria**
   - **Pseudodirecte**
   - **Relatiu al PC**
