@@ -105,7 +105,7 @@ v: .space 100*4
 
 ## **2.4 Operands**
 - **Principi de disseny**: "Simplicity favors regularity".
-- ![Registres en MIPS](img/Captura de pantalla 2025-03-16 202133.png)
+- ![Registres en MIPS](img/img2.png)
 - **Modes d’adreçament**:
   - **Registre**:
     - `addu rd, rs, rt` → rd = rs + rt
