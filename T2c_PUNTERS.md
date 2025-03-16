@@ -1,4 +1,10 @@
-# **Resumen - Instruccions i tipus de dades bàsics (EC)**
+## Índice
+- [2.11 Punters](#211-punters)
+  - [2.11.1 Declaració](#2111-declaracio)
+  - [2.11.2 Inicialització](#2112-inicialitzacio)
+  - [2.11.3 Operació de Desreferència](#2113-operacio-de-desferencia-indirection)
+  - [2.11.4 Aritmètica de Punters](#2114-aritmetica-de-punters)
+  - [2.11.5 Relació entre Punters i Vectors](#2115-relacio-entre-punters-i-vectors)
 
 ## **2.11 Punters**
 
