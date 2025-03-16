@@ -9,15 +9,15 @@
 - Dígits `0-9` a partir del codi `48 (0x30)`.
 - Majúscules `A-Z` a partir del codi `65 (0x41)`.
 - Minúscules `a-z` a partir del codi `97 (0x61)`.
-- Caràcter nul (`\n` en C) és `0x00`.
-- Espai (`' '`) és `0x20`, salt de línia (`'
-'`) és `0x0A`.
+- Caràcter nul (`\0` en C) és `0x00`.
+- Espai (`' '`) és `0x20`
+- salt de línia (`'\n'`) és `0x0A`.
 
 #### **Conversió entre majúscules i minúscules**
 ```
 char min = maj + 32;
 ```
-#### **Conversió de digit numeric a char**
+#### **Conversió dígit ascii/valor numèric**
 char digit_char = '0' + numero;
 
 
@@ -55,7 +55,10 @@ main:
 - **3 formats principals:**  
   - **R (register)**  
   - **I (immediate)**  
-  - **J (jump)**  
+  - **J (jump)**
+ 
+<img src="img/img6.png" width="60%">
+<img src="img/img6.png" width="60%">
 
 ### **Exemple: codificació binària d'una instrucció**
 ```assembly
