@@ -76,6 +76,7 @@ l:  .dword 0x8877665544332211
   - `.half` → múltiple de 2
   - `.word` → múltiple de 4
   - `.dword` → múltiple de 8
+  <img src="img/img5.png" width="75%">
 
 #### **Vectors en memòria**:
 ```c
