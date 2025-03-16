@@ -165,7 +165,7 @@ a: .word 0
 main:
     la $t0, a  # $t0 = &a
 ```
-- **Constants simbòliques**:
+- **Constants simbòliques**: define N
 ```assembly
 .eqv N 10
 li $t0, N
