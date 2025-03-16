@@ -159,5 +159,3 @@ main:
 
 ---
 
-Aquest és el **resum complet** de **punters en MIPS**, **mantenint exemples i estructures originals**. 🚀
-
