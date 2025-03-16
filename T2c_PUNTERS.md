@@ -6,9 +6,9 @@
   - [2.11.4 Aritmètica de Punters](#2114-aritmetica-de-punters)
   - [2.11.5 Relació entre Punters i Vectors](#2115-relacio-entre-punters-i-vectors)
 
-## **2.11 Punters**
+<h2 id="211-punters">2.11 Punters</h2>
+<h3 id="2111-declaracio">2.11.1 Declaració</h3>
 
-### **2.11.1 Declaració**
 - Un **punter** és una variable que conté una **adreça de memòria**.
 - En **MIPS**, un punter ocupa **32 bits**.
 - Si el punter `p` conté l’adreça de la variable `v`, diem que `p` **apunta a** `v`.
@@ -31,7 +31,8 @@ p2: .word 0  # Només si és global
 
 ---
 
-### **2.11.2 Inicialització**
+<h3 id="2112-inicialitzacio">2.11.2 Inicialització</h3>
+
 - L’operador `&` retorna l’adreça d’una variable.
 
 #### **Inicialització dins la declaració (C):**
