@@ -106,6 +106,7 @@ v: .space 100*4
 ## **2.4 Operands**
 - **Principi de disseny**: "Simplicity favors regularity".
 <img src="img/img2.png" width="75%">
+<img src="img/img3.png" width="75%">
 
 - **Modes d’adreçament**:
   - **Registre**:
@@ -121,7 +122,7 @@ v: .space 100*4
 - **Pseudoinstruccions**:
   - `move rdest, rsrc` →  rdest = rsrc: addu rdest, rsrc, $zero
 - **Registres starnards**:
-- ![Registres en MIPS](img/registros_standard_mips.png)
+- ![Registres en MIPS](img/img1.png)
 
 ### **2.4.1 Operands en mode registre i immediat**
 - 32 registres de 32 bits.
