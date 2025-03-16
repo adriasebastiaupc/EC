@@ -58,7 +58,7 @@ main:
   - **J (jump)**
  
 <img src="img/img6.png" width="60%">
-<img src="img/img6.png" width="60%">
+<img src="img/img7.png" width="60%">
 
 ### **Exemple: codificació binària d'una instrucció**
 ```assembly
@@ -90,13 +90,15 @@ int vec2[5] = {0, 1, 2, 3, 4};
 #### **En MIPS:**
 ```assembly
 .data
+...
 .align 2
 vec:  .space 400  # Reserva espai per a 100 enters (100 * 4 bytes)
-vec2: .word 0, 1, 2, 3, 4
+vec2: .word 0, 1, 2, 3, 4 # Declara vector amb valors
 ```
 
 ### **Accés a un element (índex constant)**
 #### **En C:**
+Per accedir a l’element i-èssim cal calcular la seva adreça: `@vec[i] = @vec[0] + i * T`
 ```c
 int vec[100];
 int main() {
@@ -118,11 +120,12 @@ int main() {
     x = vec[i];
 }
 ```
-#### **En MIPS:**
+#### **En MIPS:** 
+Forma de cálculo: `&vec[i] = &vec[0] + i*4`
 ```assembly
-la $t0, vec       # Adreça base del vector
-sll $t3, $t2, 2   # Multiplicar i per 4 (i * 4)
-addu $t0, $t0, $t3 # Calcular @vec[i]
+la $t0, vec       # Adreça base del vector: &vec[0]
+sll $t3, $t2, 2   # Multiplicar i per 4 (i*4): $t3 = i<<2 = i*4
+addu $t0, $t0, $t3 # Calcular @vec[i]: $t0 = &vec[0] + i*4
 lw $t1, 0($t0)    # x = vec[i]
 ```
 
@@ -131,18 +134,26 @@ lw $t1, 0($t0)    # x = vec[i]
 ## **2.10 Strings**
 - **Cadenes de caràcters** de mida variable.
 - En **Java**: Es representen com una tupla `(longitud, array de caràcters)`.
-- En **C**: Vector de caràcters **amb sentinella (`\n`)**.
+- En **C**: Vector de caràcters **amb sentinella (`\0`)**.
 
 ### **Declaració de cadenes**
 #### **En C:**
 ```c
 char cadena[20] = "Una frase";
-char cadena[20] = {'U', 'n', 'a', ' ', 'f', 'r', 'a', 's', 'e', '\n'};
+char cadena[20] = {'U', 'n', 'a', ' ', 'f', 'r', 'a', 's', 'e', '\0'};
 ```
-#### **En MIPS:**
+#### **En MIPS: Opcio 1 amb ascii**
 ```assembly
 .data
-cadena: .asciiz "Una frase"  # Inclou el sentinella '\n'
+cadena:
+.ascii "Una frase" # 9 car .
+.space 11 # El sentinella i 10 zeros
+```
+#### **En MIPS: Opcio 2 amb asciiz**
+```assembly
+cadena :
+.asciiz "Una frase" # 10 (inclou sentinella)
+.space 10
 ```
 
 ### **Accés als elements d’una cadena**
@@ -150,7 +161,9 @@ cadena: .asciiz "Una frase"  # Inclou el sentinella '\n'
 ```c
 char nom[80];
 int num = 0;
-while (nom[num] != '\n') num++;
+...
+while (nom[num] != '\0') num++;
+    ...
 ```
 #### **En MIPS:**
 ```assembly
@@ -166,5 +179,6 @@ while:
     addiu $t0, $t0, 1   # num += 1
     b while
 end:
+    ...
 ```
 
