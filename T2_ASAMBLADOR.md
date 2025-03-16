@@ -106,8 +106,11 @@ v: .space 100*4
 ## **2.4 Operands**
 - **Principi de disseny**: "Simplicity favors regularity".
 - **Modes d’adreçament**:
-  - **Registre**
-  - **Immediat**
+  - **Registre**:
+    - addu rd, rs, rt
+    - subu rd, rs, rt
+  - **Immediat**:
+    - addiu rt, rs, imm16 --> rt = rs + SignExt(imm16)
   - **Memòria**
   - **Pseudodirecte**
   - **Relatiu al PC**
