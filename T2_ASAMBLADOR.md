@@ -104,9 +104,8 @@ v: .space 100*4
 ---
 
 ## **2.4 Operands**
-<img src="img/img2.png" width="75%">
-<img src="img/img3.png" width="75%">
-
+- **Registres starnards**:
+- ![Registres en MIPS](img/img1.png)
 - **Modes d’adreçament**:
   - **Registre**:
     - `addu rd, rs, rt` → rd = rs + rt
@@ -119,8 +118,9 @@ v: .space 100*4
   - **Relatiu al PC**
 - **Pseudoinstruccions**:
   - `move rdest, rsrc` →  rdest = rsrc: addu rdest, rsrc, $zero
-- **Registres starnards**:
-- ![Registres en MIPS](img/img1.png)
+ 
+<img src="img/img2.png" width="75%">
+<img src="img/img3.png" width="75%">
 
 ### **2.4.1 Operands en mode registre i immediat**
 - 32 registres de 32 bits.
