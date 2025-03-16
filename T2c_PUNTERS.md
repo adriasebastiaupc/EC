@@ -67,7 +67,7 @@ f:
 
 ---
 
-### **2.11.3 Operació de Desreferència (Indirection)**
+<h3 id="2113-Operacio-de-desreferència-indirection">2.11.3 Operació de Desreferència (Indirection)</h3>
 - L’operador `*` davant d’un punter retorna **el valor de la variable a la qual apunta**.
 
 #### **Exemple en C (punter global):**
@@ -106,7 +106,8 @@ g:
 
 ---
 
-### **2.11.4 Aritmètica de Punters**
+<h3 id="2114-aritmetica-de-punters">2.11.4 Aritmètica de Punters</h3>
+
 - En C, sumar un enter `N` a un punter `p` que apunta a un tipus de `T` bytes:
   ```c
   p = p + N * T;
@@ -131,6 +132,8 @@ addiu $t3, $t3, 24  # p3 + 3 * 8 bytes
 
 ---
 
+
+<h3 id="2115-relacio-entre-punters-i-vectors">2.11.5 Relació entre Punters i Vectors</h3>
 ### **2.11.5 Relació entre Punters i Vectors**
 - Un **vector** és en realitat un **punter** al primer element.
 
