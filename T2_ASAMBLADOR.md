@@ -1,5 +1,3 @@
-![Registres en MIPS](img/registros_standard_mips.png)
-
 # **Resumen - Instruccions i tipus de dades bàsics (EC)**
 
 ## **2.2 La Memòria**
@@ -116,6 +114,8 @@ v: .space 100*4
   - **Memòria**
   - **Pseudodirecte**
   - **Relatiu al PC**
+- **Registres starnards**:
+- ![Registres en MIPS](img/registros_standard_mips.png)
 
 ### **2.4.1 Operands en mode registre i immediat**
 - 32 registres de 32 bits.
