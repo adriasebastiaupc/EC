@@ -89,7 +89,7 @@ v: .word 1, 2, 3, 4, 5
 char v[100];
 ```
 ```assembly
-v: .space 100
+v: .space 100 ## Inicialitza a 0
 ```
 - **Alineació manual amb `.align n`**:
 ```assembly
