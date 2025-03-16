@@ -104,7 +104,6 @@ v: .space 100*4
 ---
 
 ## **2.4 Operands**
-- **Principi de disseny**: "Simplicity favors regularity".
 <img src="img/img2.png" width="75%">
 <img src="img/img3.png" width="75%">
 
