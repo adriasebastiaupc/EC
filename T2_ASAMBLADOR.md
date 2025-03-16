@@ -13,8 +13,8 @@
 ### **2.3.1 Variables locals i globals**
 - **Variables en C**: Poden ser `automatic`, `extern`, `static` o `register`.
 - **Visibilitat i durada**:
-  - `auto`: Local, dura fins al final de la subrutina.
-  - `extern`: Global multi-file, dura fins al final del programa.
+  - `auto`: Local, dura fins al final de la subrutina. Per defecte, les declarades dins una funció.
+  - `extern`: Global multi-file, dura fins al final del programa. Per defecte, les declarades fora d'una funció.
   - `static`:
     - Aplicat a una variable local → persisteix fins al final del programa.
     - Aplicat a una variable global → restringeix la visibilitat a single-file.
