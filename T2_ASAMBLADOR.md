@@ -112,8 +112,12 @@ v: .space 100*4
   - **Immediat**:
     - `addiu rt, rs, imm16` → rt = rs + SignExt(imm16) # Inmediat de 16bits en Ca2
   - **Memòria**
+    - `li rd, &hex-address`
+    - `la rd, rt`
   - **Pseudodirecte**
   - **Relatiu al PC**
+- **Pseudoinstruccions**:
+  - `move rdest, rsrc` →  rdest = rsrc: addu rdest, rsrc, $zero
 - **Registres starnards**:
 - ![Registres en MIPS](img/registros_standard_mips.png)
 
