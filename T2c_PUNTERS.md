@@ -134,7 +134,7 @@ addiu $t3, $t3, 24  # p3 + 3 * 8 bytes
 
 
 <h3 id="2115-relacio-entre-punters-i-vectors">2.11.5 Relació entre Punters i Vectors</h3>
-### **2.11.5 Relació entre Punters i Vectors**
+
 - Un **vector** és en realitat un **punter** al primer element.
 
 #### **Exemple en C:**
