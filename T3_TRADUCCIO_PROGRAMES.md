@@ -10,7 +10,7 @@
 - <a href="#38-estructura-de-la-memoria">3.8 Estructura de la memòria</a>
 - <a href="#39-compilacio-assemblatge-enllacat-i-carrega">3.9 Compilació, assemblatge, enllaçat i càrrega</a>
 
-<h2 id="31-desplacaments-de-bits">3.1 Desplaçaments de bits</h2>
+<h3 id="31-desplacaments-de-bits">3.1 Desplaçaments de bits</h3>
 
 ### **Desplaçaments lògics**
 ```assembly
@@ -18,11 +18,32 @@ sll $t0, $t0, 1  # Desplaçament a l'esquerra
 srl $t0, $t0, 2  # Desplaçament a la dreta
 ```
 Multiplicar per 2^n → `sll`  
-Dividir per 2^n → `srl` (unsigned) o `sra` (signed)
+Dividir per 2^n:
+
+- Unsigned: `srl`: añade ceros por la izquierda
+- Signed: `sra`: si es positivo añade ceros y sino añade unos por la izquierda
+
+<img src="img/img8.png" width="75%">
+
+- Operador <<: Instrucció sll o sllv.
+- Operador >>: Instrucció srl/srlv si unsigned (natural) o sra/srva altrament.
+
+### **Operacions bàsiques en C**
+```c
+a = ( a << b ) >> 2;
+```
+### **Traducció en MIPS**
+```assembly
+sllv $t4, $t0, $t1
+sra $t0, $t4, 2
+```
+
+
+
 
 ---
 
-<h2 id="32-operacions-logiques-bit-a-bit">3.2 Operacions lògiques bit a bit</h2>
+<h3 id="32-operacions-logiques-bit-a-bit">3.2 Operacions lògiques bit a bit</h3>
 
 ### **Operacions bàsiques en C**
 ```c
@@ -38,6 +59,8 @@ or $t0, $t0, $t1
 xor $t0, $t0, $t1
 nor $t0, $t0, $zero  # NOT bit a bit
 ```
+
+<img src="img/img8.png" width="75%">
 
 ---
 
